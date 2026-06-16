@@ -730,11 +730,10 @@
       </div>
 
       <div>
-        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
-          <input type="hidden" name="subject" value="New message from the La raíz de la pureza website">
+        <form id="contact-form" name="contact" method="POST" action="https://formspree.io/f/mnjyrwba">
+          <input type="hidden" name="_subject" value="New message from the EncuentrosDArte website">
           <p style="display:none">
-            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            <label>Don't fill this out if you're human: <input name="_gotcha"></label>
           </p>
           <div class="form-row">
             <div class="field">
@@ -858,7 +857,7 @@
   }, { threshold: 0.3 });
   if (fill) observer.observe(fill);
 
-  // Contact form — submits to Netlify Forms (delivered to encuentrosdarte@gmail.com)
+  // Contact form — submits to Formspree (delivered to encuentrosdarte@gmail.com)
   const form = document.getElementById('contact-form');
   const btn = document.getElementById('form-btn');
   const success = document.getElementById('form-success');
@@ -866,10 +865,10 @@
     e.preventDefault();
     btn.disabled = true; btn.textContent = 'Sending…';
     try {
-      const response = await fetch('/', {
+      const response = await fetch(form.action, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString(),
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form),
       });
       if (!response.ok) throw new Error('Submission failed');
       btn.textContent = 'Sent ✓';
