@@ -442,6 +442,56 @@
   .map-embed { border-radius: 2px; overflow: hidden; width: 100%; height: 400px; border: 1px solid rgba(212,168,83,0.15); }
   .map-embed iframe { width: 100%; height: 100%; border: none; display: block; filter: grayscale(30%) contrast(1.05); }
 
+  /* ── LEGAL CARDS ── */
+  .legal-card {
+    background: rgba(26,20,16,0.6);
+    border: 1px solid rgba(212,168,83,0.15);
+    border-radius: 4px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+  .legal-card:hover {
+    border-color: rgba(212,168,83,0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .legal-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+  .legal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .legal-text {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    opacity: 0.85;
+  }
+  .legal-text p {
+    margin-bottom: 1rem;
+  }
+  .legal-text p:last-child {
+    margin-bottom: 0;
+  }
+  .legal-text strong {
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .legal-text a {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .legal-text a:hover {
+    border-bottom-color: var(--gold);
+  }
+
   /* ── FOOTER ── */
   footer {
     background: #080604; padding: 3rem; text-align: center;
@@ -518,6 +568,7 @@ src="https://www.facebook.com/tr?id=4602937106610595&ev=PageView&noscript=1"
     <li><a href="#tickets">Buy Tickets</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#location">Location</a></li>
+    <li><a href="#legal">Legal</a></li>
     <li><a href="#tickets" class="nav-cta">Book Now</a></li>
   </ul>
   <div class="hamburger" id="hamburger" aria-label="Open menu">
@@ -815,6 +866,96 @@ src="https://www.facebook.com/tr?id=4602937106610595&ev=PageView&noscript=1"
           title="Muelle Nueva York, Seville">
         </iframe>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGAL INFORMATION -->
+<section id="legal" style="background:var(--smoke); padding:5rem 0;">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:3.5rem;">
+      <span class="section-label">Legal Information</span>
+      <h2 class="section-title">Terms & Policies</h2>
+      <p style="max-width:600px; margin:0 auto; opacity:0.7;">Important information regarding bookings, cancellations, privacy and terms of service.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; max-width:1200px; margin:0 auto;">
+      
+      <!-- Booking & Cancellation Policy -->
+      <div class="legal-card">
+        <div class="legal-icon">🎟️</div>
+        <h3 class="legal-title">Booking & Cancellation Policy</h3>
+        <div class="legal-text">
+          <p><strong>Booking Confirmation:</strong> All bookings are confirmed instantly upon payment. You will receive a confirmation email with your ticket and embarkation details.</p>
+          <p><strong>Cancellation Policy:</strong> Cancellations are accepted up to <strong>48 hours before the event</strong> for a full refund. Cancellations made within 48 hours of the event are non-refundable.</p>
+          <p><strong>Force Majeure:</strong> In the event of cancellation due to force majeure (adverse weather, technical issues, or circumstances beyond our control), a full refund will be issued.</p>
+          <p><strong>Changes & Modifications:</strong> To modify your booking, contact us at <a href="mailto:encuentrosdarte@gmail.com" style="color:var(--gold);">encuentrosdarte@gmail.com</a> at least 48 hours in advance.</p>
+        </div>
+      </div>
+
+      <!-- Terms of Service -->
+      <div class="legal-card">
+        <div class="legal-icon">📋</div>
+        <h3 class="legal-title">Terms of Service</h3>
+        <div class="legal-text">
+          <p><strong>Ticket Validity:</strong> Tickets are valid only for the date and time specified. Late arrivals may not be accommodated.</p>
+          <p><strong>Age Requirements:</strong> This experience is suitable for all ages. Minors must be accompanied by an adult.</p>
+          <p><strong>Accessibility:</strong> Please contact us in advance if you have accessibility needs or special requirements.</p>
+          <p><strong>Liability:</strong> Sergam 7 Producciones S.L.U. is not liable for personal belongings lost or damaged during the event.</p>
+          <p><strong>Conduct:</strong> We reserve the right to refuse service or remove guests whose behavior disrupts the experience.</p>
+        </div>
+      </div>
+
+      <!-- Company Information -->
+      <div class="legal-card">
+        <div class="legal-icon">🏢</div>
+        <h3 class="legal-title">Company Information</h3>
+        <div class="legal-text">
+          <p><strong>Company Name:</strong> Sergam 7 Producciones S.L.U.</p>
+          <p><strong>Tax ID (CIF):</strong> B-75697466</p>
+          <p><strong>Registered Address:</strong><br>C/ Joselito Nº37, Urb. La Ramira<br>Morón de la Frontera, Sevilla (41530)<br>España</p>
+          <p><strong>Email:</strong> <a href="mailto:encuentrosdarte@gmail.com" style="color:var(--gold);">encuentrosdarte@gmail.com</a></p>
+          <p><strong>Website:</strong> <a href="https://encuentrosdarte.com" style="color:var(--gold);">www.encuentrosdarte.com</a></p>
+        </div>
+      </div>
+
+      <!-- Privacy & Data Protection -->
+      <div class="legal-card">
+        <div class="legal-icon">🔒</div>
+        <h3 class="legal-title">Privacy & Data Protection</h3>
+        <div class="legal-text">
+          <p><strong>Data Controller:</strong> Sergam 7 Producciones S.L.U. (CIF B-75697466)</p>
+          <p><strong>Data Collected:</strong> Name, email address, and booking details necessary to provide the service.</p>
+          <p><strong>Purpose:</strong> Your data is used solely to process your booking and communicate event details. Legal basis: contract performance (GDPR Art. 6.1.b).</p>
+          <p><strong>Your Rights:</strong> You have the right to access, rectify, erase, and port your data. Contact <a href="mailto:encuentrosdarte@gmail.com" style="color:var(--gold);">encuentrosdarte@gmail.com</a> or lodge a complaint with the Spanish Data Protection Authority (AEPD) at <a href="https://www.aepd.es" target="_blank" style="color:var(--gold);">www.aepd.es</a>.</p>
+          <p>In accordance with GDPR (EU) 2016/679 and Spanish Organic Law 3/2018 (LOPDGDD).</p>
+        </div>
+      </div>
+
+      <!-- Payment & Security -->
+      <div class="legal-card">
+        <div class="legal-icon">💳</div>
+        <h3 class="legal-title">Payment & Security</h3>
+        <div class="legal-text">
+          <p><strong>Payment Methods:</strong> We accept all major credit and debit cards via our secure payment partner.</p>
+          <p><strong>Security:</strong> All transactions are encrypted and processed through secure payment gateways. We do not store credit card information.</p>
+          <p><strong>Pricing:</strong> All prices are in Euros (€) and include applicable taxes unless otherwise stated.</p>
+          <p><strong>Invoices:</strong> A digital invoice will be sent to your email upon completion of purchase.</p>
+        </div>
+      </div>
+
+      <!-- Applicable Law -->
+      <div class="legal-card">
+        <div class="legal-icon">⚖️</div>
+        <h3 class="legal-title">Applicable Law & Jurisdiction</h3>
+        <div class="legal-text">
+          <p><strong>Governing Law:</strong> These terms are governed by Spanish law.</p>
+          <p><strong>Jurisdiction:</strong> Any disputes arising from this service shall be submitted to the courts of Sevilla, Spain.</p>
+          <p><strong>Consumer Protection:</strong> In accordance with Spanish Law for the Defense of Consumers and Users (Real Decreto Legislativo 1/2007).</p>
+          <p><strong>Online Dispute Resolution:</strong> EU consumers may use the European Commission's <a href="https://ec.europa.eu/consumers/odr" target="_blank" style="color:var(--gold);">ODR platform</a>.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
